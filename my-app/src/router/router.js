@@ -31,7 +31,7 @@ function setRouter() {
       // Add more cases if there are more pages
       if (!isLoggedIn) {
         window.location.pathname = "/index.html"; // default page when logged out
-      } else if (userRole !== "admin") {
+      } else if (userRole != "admin") {
         // Redirect to home page if the user is not an owner or admin
         window.location.pathname = "/home.html";
       }

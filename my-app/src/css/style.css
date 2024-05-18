@@ -788,19 +788,19 @@ footer h1{
   margin-right: -2px;
 }
 .tab-style1 li:nth-child(1).active~li:nth-child(2):not(.active){
-  margin-left: 0px;
+  margin-left: -16px;
 }
 .tab-style1 li:nth-child(1):not(.active)~li:nth-child(2):not(.active){
   margin-right: -15px;
 }
-.tab-style1 li:nth-child(2):not(.active)~li:nth-child(3).active~{
-  margin-left: -18px;
+.tab-style1 li:nth-child(2):not(.active)~li:nth-child(3).active{
+  margin-left: 12px;
 }
 .tab-style1 li:nth-child(3).active{
   margin-right: -8px;
 }
 .tab-style1 li:nth-child(2).active{
-  margin-left: 20px;
+  margin-left: 0px;
 }
 .tab-style1 li:nth-child(1):not(.active){
   margin-left: 10px;
@@ -866,6 +866,21 @@ footer h1{
 .tab-style1 li:nth-child(3).active ~ .follow {
   left: 140px;
 }
+.homepagephoto{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  #label option{
+    font-size: 10px; /* Adjust the font size as per your requirement */
+  }
+  #preferences option{
+    font-size: 10px; /* Adjust the font size as per your requirement */
+  }
+}
+
 .tab-style1 .active {
   z-index: 100;
   width: 80px;
@@ -995,6 +1010,35 @@ footer h1{
 .email{
   width: 40%;
 }
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.btn-link {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.post-id-container {
+  display: flex;
+  align-items: center;
+}
+
+.comment-section .btn {
+  margin-right: 0.5rem;
+}
+
 input.editnow{
   border: 1px solid gray;
 }

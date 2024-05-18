@@ -18,14 +18,14 @@
       nomodule
       src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
     ></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.c5a00942.ico" />
     <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkFwcCIsCiAgInNob3J0X25hbWUiOiAiQXBwIiwKICAic3RhcnRfdXJsIjogImluZGV4Lmh0bWwiLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJpY29ucyI6IFt7CiAgICAic3JjIjogImFzc2V0cy9pbWdzL2xvZ28ucG5nIiwKICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICJ0eXBlIjogImltYWdlL3BuZyIKICB9XSwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMzFkNTNkIiwKICAidGhlbWVfY29sb3IiOiAiIzMxZDUzZCIKfQo=" />
     
     <meta name="theme-color" content="#31d53d" />
     
     <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/system/userprofile.js"></script>
   </head>
   <body>
     <nav class="fixed-top navbar navbar-expand-lg bg-light navigatu">
@@ -109,17 +109,18 @@
           <div class="profile-container">
             <div class="container-fluid base"><h5 class="py-3 px-2">Preview</h5></div>
             <div class="profile-inner">
-              <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="profpic">
-              <h1>Glomer P. Celestino</h1>
-              <small>I am new here! Hello!</small>
-              <small>October 25, 2000</small>
-              <small class="qual">Followers 10</small>
-              <a href=""><small>glomer.celestino@yahoo.com</small></a>
+              <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="profpic" id="yawamo">
+              <h1><span id="first_name"></span><span id="last_name"></span></h1>
+              <small id="bio">To add about information, click edit profile.</small>
+              <small id="birth_date"></small>
+              <small class="qual">Posts 10</small>
+              <small class="qual">Posts clicked 10</small>
+              <a href=""><small id="contact">To add about information, click edit profile.</small></a>
             </div>
             <div class="container-fluid sector">
               <div class="descipt">
                 <h1>About</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum tenetur cum quia iste at eius accusantium distinctio earum quibusdam dolores illum incidunt sapiente, optio officiis cupiditate natus obcaecati commodi non?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error vitae autem tempore laboriosam aperiam, eligendi, aspernatur accusantium, quasi ipsum hic aut quod amet incidunt quidem officiis atque iusto maxime.</p>
+                <p id="about">To add about information, click edit profile.</p>
               </div>
             </div>
           </div>
@@ -133,52 +134,80 @@
             <div class="container-fluid base"><h5 class="py-3 px-2">Edit</h5></div>
             <div class="profile-inner">
               <div class="d-lg-flex d-md-flex">
+                <form id="form_image">
+                  <div>
+                    <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="profpic" id="myProfile">
+                  </div>
+                  <div class="changepic pt-sm-3 px-sm-3 px-3">
+                    <p>Change Profile Picture</p>
+                    <input type="file" accept="image/*" class="custom-file-input" id="input-file" name="input-file">
+                  </div>
+                </form>
+              </div>
+
+              <form action="" id="Full_Name">
+              <h3 class="pt-sm-5 pt-1">Name</h3>
+              <div class="d-flex mb-2">
+                <div class="input-container">
+                  <input type="text" placeholder="First Name" class="w-100 small" id="name_first" name="name_first">
+                </div>
+                  <button type="submit" class="btn btn-primary mx-2">Update</button>
+              </div>
+              <div class="d-flex">
+                <div class="input-container">
+                  <input type="text" placeholder="Last Name" class="w-100 small"  id="last_first" name="name_last">
+                </div>
+                  <button type="submit" class="btn btn-primary mx-2">Update</button>
+              </div>
+              </form>
+
+
+              <form action="" id="BioExtract2">
+                <h3>Bio</h3>
+                <div class="d-flex ">
+                <div class="input-container">
+                  <input type="text" class="w-100 small" id="bio1" placeholder="Say Something" name="bio1" />
+                </div>
                 <div>
-                  <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="profpic">
+                  <button type="submit" class="btn btn-primary mx-2">Update</button>
                 </div>
-                <div class="changepic pt-sm-3 px-sm-3 px-3">
-                  <p>Change Profile Picture</p>
-                  <input type="file" class="custom-file-input" id="inputGroupFile01">
                 </div>
-              </div>
-              <h3 class="pt-sm-5 pt-3">Name</h3>
-              <div class="d-flex">
-                <input type="text" placeholder="First Name" class="editnow">
-              </div>
-              <div class="d-flex">
-                <input type="text" placeholder="Last Name" class="editnow">
-              </div>
-              <h3>Bio</h3>
-              <div class="d-flex">
-                <textarea placeholder="Say something about yourself..." class="editnow biooo"></textarea>
-              </div>
-              <h3>Contact Info</h3>
-              <div class="d-flex pb-3">
-                <input type="text" placeholder="Email Address" class="editnow email">
-              </div>
+              </form>
+
+
+
+              <form action="" id="BioExtract3">
+                <h3>Contact Info</h3>
+                <div class="d-flex">
+                  <div class="input-container">
+                    <input type="email" class="w-100 small" id="bio2" placeholder="Input contact address" name="bio2" />
+                  </div>
+                  <button type="submit" class="btn btn-primary mx-2">Update</button>
+                </div>
+              </form>
+
+
+
             </div>
             <div class="container-fluid sector">
-              <div class="descipt">
-                <h1 class="px-lg-3">About</h1>
-                <div class="d-flex ">
-                  <textarea placeholder="Tell something you want to share..." class="editnow aboutchange mx-3 mx-lg-5 mx-sm-3"></textarea>
-                </div>
+              <div class="descipt mb-2">
+                <form action="" id="BioExtract1">
+                <h1 class="px-lg-4">About</h1>
                 <div class="d-flex">
-                  <div class="col-sm-3 mt-3 mb-4 col-lg-2 px-2 px-lg-4 px-md-2">
-                    <a href="profile.html">
-                      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        Save
-                      </button>
-                    </a>
+                  <div class="d-flex">
+                    <div class="container mx-lg-2">
+                      <input type="text" class="form-control small mx-lg-4" id="bio3" placeholder="Something about yourself" name="bio3"/>
+                    </div>
                   </div>
-                  <div class="col-sm-3 mt-3 mb-4 col-lg-2 px-4 px-lg-1 px-md-1">
-                    <a href="profile.html">
-                      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        Discard
-                      </button>
-                    </a>
-                  </div>
+                  <button type="submit" class="btn btn-primary mx-2">Update</button>
                 </div>
+                </form>
+                <a href="profile.html">
+                  <button id="btn_interact" class="btn btn-primary mx-2 my-2" type="button" aria-controls="offcanvasExample">
+                    Back to Profile
+                  </button>
+                </a>
+
               </div>
             </div>
           </div>

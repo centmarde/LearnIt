@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#31d53d" />
     
     <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/system/profile.js"></script>
   </head>
   <body>
     <nav class="fixed-top navbar navbar-expand-lg bg-light navigatu">
@@ -105,102 +105,108 @@
     
     <main>
       <div class="container d-lg-flex d-md-flex">
-        <div class="profile-main col-lg-9 col-md-12 col-sm-12">
+        <div class="profile-main col-lg-9 col-md-12 col-sm-12 my-5">
           <div class="profile-container">
             <div class="container-fluid base"></div>
             <div class="profile-inner">
-              <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="profpic">
-              <h1>Glomer P. Celestino</h1>
-              <small>I am new here! Hello!</small>
-              <small>October 25, 2000</small>
-              <small class="qual">Followers 10</small>
-              <a href=""><small>glomer.celestino@yahoo.com</small></a>
+                <img src="assets/imgs/icooon.b1acba16.png" alt="" class="profpic" id="myProfilefuck">
+                <h1><span id="first_name"></span><span id="last_name"></span></h1>
+                <small id="bio">To add about information, click edit profile.</small>
+                <small id="birth_date"></small>
+                <small class="qual">Posts 10</small>
+                <small class="qual">Posts clicked 10</small>
+                <a href=""><small id="contact">To add about information, click edit profile.</small></a>
+                <div class="d-flex">
+                    <div class="col-sm-3 mt-3 mb-4 mx-4">
+                        <a href="editprofile.html">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                Edit Profile
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid sector my-5 mb-5">
+                <div class="descipt">
+                    <h1>About</h1>
+                    <p id="about">To add about information, click edit profile.</p>
+                </div>
+            </div>
 
-              <div class="d-flex">
-                <div class="col-sm-3 mt-3 mb-4 mx-4">
-                  <a href="editprofile.html">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                      Edit Profile
+
+          </div>
+          <div class="container-fluid insidebarabi secondrow posting my-5 mt-5">
+            <h3 class="mx-1">Posts</h3>
+            <div id="post_container">
+
+
+              <div class="container-fluid insidebarabi secondrow posting p-2">
+                <div class="post-author">
+                  <a href="otherprofile.html">
+                    <button class="tofriend" >
+                    <div>
+                      <img class="block my-2 border border-dark border-2 rounded-circle" style="width: 100px; height: 100px;" src="assets/imgs/VPAA-Jamisola_Mark Daniel.jpg">
+                    </div>
                     </button>
                   </a>
+                  <div class="ms-2">
+                    <h1>Mark Jamisola</h1>
+                    <small class="mt-3">Tutoring</small>
+                    <p class="UaI">Urgent and Important</p>
+                    <small>2024-05-17T11:05:19
+                    </small>
+                  </div>
                 </div>
-                
+                <div class="card p-2 my-2" style="width: auto;">
+                  <p class=" text-center card-text">hallo the universe</p></div>
+                <div class="d-flex">
+                  <div class="col-3">
+                    <small>Post ID : </small><small class="postidnum">42</small>
+                  </div>
+                  <div class="col-3"></div>
+                  <div class="col-6 text-end">
+                    <button id="btn_interact" class="btn btn-primary" type="button" aria-controls="offcanvasExample">
+                      Interact
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid insidebarabi secondrow posting p-2">
+                <div class="post-author">
+                  <a href="otherprofile.html">
+                    <button class="tofriend" >
+                    <div>
+                      <img class="block my-2 border border-dark border-2 rounded-circle" style="width: 100px; height: 100px;" src="assets/imgs/VPAA-Jamisola_Mark Daniel.jpg">
+                    </div>
+                    </button>
+                  </a>
+                  <div class="ms-2">
+                    <h1>Mark Jamisola</h1>
+                    <small class="mt-3">Homework</small>
+                    <p class="UaI">Urgent and Important</p>
+                    <small>2024-05-17T11:05:19
+                    </small>
+                  </div>
+                </div>
+                <div class="card p-2 my-2" style="width: auto;">
+                  <p class=" text-center card-text">I need help with my assignment</p></div>
+                <div class="d-flex">
+                  <div class="col-3">
+                    <small>Post ID : </small><small class="postidnum">44</small>
+                  </div>
+                  <div class="col-3"></div>
+                  <div class="col-6 text-end">
+                    <button id="btn_interact" class="btn btn-primary" type="button" aria-controls="offcanvasExample">
+                      Interact
+                    </button>
+                  </div>
+                </div>
               </div>
 
             </div>
-
-            <div class="container-fluid sector">
-              <div class="descipt">
-                <h1>About</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum tenetur cum quia iste at eius accusantium distinctio earum quibusdam dolores illum incidunt sapiente, optio officiis cupiditate natus obcaecati commodi non?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error vitae autem tempore laboriosam aperiam, eligendi, aspernatur accusantium, quasi ipsum hic aut quod amet incidunt quidem officiis atque iusto maxime.</p>
-              </div>
-            </div>
-
           </div>
 
-          <div class="container-fluid insidebarabi secondrow posting">
-            <div class="post-author">
-              <a href="otherprofile.html">
-                <button class="tofriend">
-                  <img src="/assets/imgs/icooon.b1acba16.png" alt="">
-                </button>
-              </a>
-              <div>
-                <h1>Glomer Celestino</h1>
-                <small>Homework</small>
-                <p class="UaI">Urgent and Important</p>
-                <small>2 hours ago</small>
-              </div>
-            </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium vero, doloribus consectetur, eos recusandae animi blanditiis repellat amet ipsum necessitatibus, ducimus earum atque ab odio error voluptas iusto optio incidunt.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iste, laudantium recusandae officia unde vitae animi reiciendis ad totam sint, quis maiores eveniet veniam dicta ullam aut deserunt cum quidem.
-            </p>
-            <div class="d-flex">
-              <div class="col-3">
-                <small>Post ID : </small><small class="postidnum">10</small>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-6 text-end">
-                <a href="post.html">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    Interact to post...
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-  
-          <div class="container-fluid insidebarabi secondrow posting">
-            <div class="post-author">
-              <a href="otherprofile.html">
-                <button class="tofriend">
-                  <img src="/assets/imgs/icooon.b1acba16.png" alt="">
-                </button>
-              </a>
-              <div>
-                <h1>Glomer Celestino</h1>
-                <small>Homework</small>
-                <p class="UaI">Urgent and Important</p>
-                <small>2 hours ago</small>
-              </div>
-            </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium vero, doloribus consectetur, eos recusandae animi blanditiis repellat amet ipsum necessitatibus, ducimus earum atque ab odio error voluptas iusto optio incidunt.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iste, laudantium recusandae officia unde vitae animi reiciendis ad totam sint, quis maiores eveniet veniam dicta ullam aut deserunt cum quidem.
-            </p>
-            <div class="d-flex">
-              <div class="col-3">
-                <small>Post ID : </small><small class="postidnum">10</small>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-6 text-end">
-                <a href="post.html">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    Interact to post...
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div class="profile-sidebar col-lg-3 mx-4 d-none d-lg-block d-xl-block">
@@ -215,13 +221,13 @@
           </div>
           
           <div class="insidebarabi babam">
-            <h5>Friend Suggestion</h5>
+            <h5>People</h5>
             <div class="d-flex">
               <div class="col-9">
-                <img src="/assets/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
+                <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
                 <small class="nameko">Glomer Celestino</small>
               </div>
-              <div class="mt-3"> 
+              <div class="mt-1"> 
                 <a href="otherprofile.html">
                   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     View
@@ -231,10 +237,10 @@
             </div>
             <div class="d-flex">
               <div class="col-9">
-                <img src="/assets/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
+                <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
                 <small class="nameko">Melvin Jipos</small>
               </div>
-              <div class="mt-3"> 
+              <div class="mt-1"> 
                 <a href="otherprofile.html">
                   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     View
@@ -244,10 +250,10 @@
             </div>
             <div class="d-flex">
               <div class="col-9">
-                <img src="/assets/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
+                <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
                 <small class="nameko">Donald Cuenca</small>
               </div>
-              <div class="mt-3"> 
+              <div class="mt-1"> 
                 <a href="otherprofile.html">
                   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     View
@@ -257,10 +263,10 @@
             </div>
             <div class="d-flex">
               <div class="col-9">
-                <img src="/assets/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
+                <img src="/assets/imgs/icooon.b1acba16.png" alt="" class="logophoto sizelogo">
                 <small class="nameko">Mark Jamisola</small>
               </div>
-              <div class="mt-3 "> 
+              <div class="mt-1"> 
                 <a href="otherprofile.html">
                   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     View
@@ -280,3 +286,14 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
